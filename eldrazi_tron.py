@@ -25,7 +25,7 @@ for i in range(iterations):
 		has_TKS = hand.contains("Thought-Knot Seer")
 		has_Reshaper = hand.contains("Matter Reshaper")
 		has_Chalice = hand.contains("Chalice of the Void")
-		temples = hand.count_of("Eldrazi Temple") 
+		temples = hand.count_of("Eldrazi Temple")
 		has_Map = float(hand.count_of("Expedition Map") > 0 and lands >= 2)
 		has_Stone = hand.contains("Mind Stone")
 
@@ -48,7 +48,7 @@ p_hands = hand_counts / totals.reshape((starting_size + 1) - mullto,1)
 p_early_success = early_success / iterations
 p_success = success / iterations
 
-with open("output/etron_output.csv","wb") as file:
+with open("output/etron_output.csv","w") as file:
 	file.write(str(iterations) + " iterations\n\n")
 
 	file.write("Probabilities of good hands:\n")
